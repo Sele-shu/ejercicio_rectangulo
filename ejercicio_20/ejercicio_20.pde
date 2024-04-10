@@ -14,6 +14,8 @@ public void draw(){
 }
 
 public void dibujarRectangulos(){
+  for(float x=coordenadasRect.x; x<width;x+= (ancho+disEntreRect)){
+    rect(x,coordenadasRect.y,ancho,alto);
+  }
   
-  rect(coordenadasRect.x,coordenadasRect.y,ancho,alto);
 }
