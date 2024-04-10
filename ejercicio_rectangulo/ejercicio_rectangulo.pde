@@ -9,10 +9,13 @@ public void setup(){
   coordenadasRect = new PVector (disEntreRect,disEntreRect);
 }
 
-public void draw(){
+void draw(){
+  background(10);
+  fill(#C11010);
+  stroke(#FCF32E);
   dibujarRectangulos();
 }
-
+  
 public void dibujarRectangulos(){
   for(float x=coordenadasRect.x; x<width;x+= (ancho+disEntreRect)){
     rect(x,coordenadasRect.y,ancho,alto);
