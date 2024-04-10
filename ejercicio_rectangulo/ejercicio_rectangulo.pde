@@ -1,24 +1,25 @@
 PVector coordenadasRect;
-int ancho, alto, disEntreRect;
+int alto,ancho,distRect;
 
-public void setup(){
-  size(440,420);
-  disEntreRect = 20;
-  ancho=40;
-  alto=20;
-  coordenadasRect = new PVector (disEntreRect,disEntreRect);
+void setup(){
+   size(440,420);
+   distRect = 20;
+   ancho= 40;
+   alto= 20;
+   coordenadasRect= new PVector(distRect,distRect);
 }
 
 void draw(){
   background(10);
   fill(#C11010);
   stroke(#FCF32E);
-  dibujarRectangulos();
+  dibujarRec();
 }
-  
-public void dibujarRectangulos(){
-  for(float x=coordenadasRect.x; x<width;x+= (ancho+disEntreRect)){
-    rect(x,coordenadasRect.y,ancho,alto);
+
+void dibujarRec(){
+  for(float x=coordenadasRect.x;x<width;x+=(ancho+distRect)){
+    for(float y=coordenadasRect.y;y<height;y+=(alto+distRect)){
+      rect(x,y,ancho,alto);
+    }
   }
-  
 }
